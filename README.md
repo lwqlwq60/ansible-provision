@@ -10,10 +10,10 @@ sudo apt update && sudo apt install -y curl
 curl -L https://raw.githubusercontent.com/jinweijie/ansible-provision/master/bootstrap.sh | bash
 
 # Run Ansible configuration for specific server
-sudo apt update && sudo apt install -y git ansible && sudo ansible-pull -U https://github.com/jinweijie/ansible-provision server.yml
+sudo apt update && sudo apt install -y git ansible && sudo ansible-pull -U https://github.com/lwqlwq60/ansible-provision server.yml
 
 # Run Ansible configuration for specific workstation
-sudo apt update && sudo apt install -y git ansible && sudo ansible-pull -U https://github.com/jinweijie/ansible-provision workstation.yml
+sudo apt update && sudo apt install -y git ansible && sudo ansible-pull -U https://github.com/lwqlwq60/ansible-provision workstation.yml
 
 ```
 
