@@ -8,6 +8,7 @@
   package:
     name:
       - git
+      - tig
       - htop
       - zsh
       - vim
