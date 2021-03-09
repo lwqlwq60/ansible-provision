@@ -1,7 +1,7 @@
 - name: install docker
   become: yes
   shell:
-    cmd: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && rm get-docker.sh
+    cmd: curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && rm get-docker.sh --mirror Aliyun
     chdir: /tmp
     creates: /usr/bin/docker
     warn: false
