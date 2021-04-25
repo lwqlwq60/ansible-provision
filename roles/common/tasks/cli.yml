@@ -17,16 +17,16 @@
     creates: "~{{ username }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
   environment:
     http_proxy: http://www.lwq.cool:10809
-
+    
 - name: install zsh-autosuggestions
   become: yes
   become_user: "{{ username }}"
   command: "git clone -c core.autocrlf=input --depth=1 https://github.com/zsh-users/zsh-autosuggestions .oh-my-zsh/custom/plugins/zsh-autosuggestions"
+  environment:
+    http_proxy: http://www.lwq.cool:10809
   args:
     chdir: "~{{ username }}"
     creates: "~{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  environment:
-    http_proxy: http://www.lwq.cool:10809
 
 - name: copy .zshrc file
   copy:
