@@ -5,6 +5,8 @@
   args:
     chdir: "~{{ username }}"
     creates: "~{{ username }}/.oh-my-zsh"
+  environment:
+    http_proxy: http://www.lwq.cool:10809
 
 - name: install zsh-syntax-highlighting
   become: yes
@@ -13,6 +15,8 @@
   args:
     chdir: "~{{ username }}"
     creates: "~{{ username }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+  environment:
+    http_proxy: http://www.lwq.cool:10809
 
 - name: install zsh-autosuggestions
   become: yes
@@ -20,7 +24,9 @@
   command: "git clone -c core.autocrlf=input --depth=1 https://github.com/zsh-users/zsh-autosuggestions .oh-my-zsh/custom/plugins/zsh-autosuggestions"
   args:
     chdir: "~{{ username }}"
-    creates: "~{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+    creates: "~{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  environment:
+    http_proxy: http://www.lwq.cool:10809
 
 - name: copy .zshrc file
   copy:
