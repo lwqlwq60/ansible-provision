@@ -26,7 +26,7 @@
     http_proxy: http://www.lwq.cool:10809
   args:
     chdir: "~{{ username }}"
-    creates: "~{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    creates: "~{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 
 - name: copy .zshrc file
   copy:
